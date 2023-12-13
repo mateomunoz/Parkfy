@@ -1,0 +1,41 @@
+/*Hoja de estilos*/
+.alinear-mitad {
+position:absolute !important;
+			bottom: 20% !important;	 
+			padding: 0 !important;
+}
+
+.txt-sombra {
+	text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.6) !important;	
+}
+
+.input-ancho{
+	width:70% !important;
+}
+
+
+
+input:not(:placeholder-shown):invalid {
+	border: solid 1px red !important;
+	background-color:#ffdbdb !important;
+}
+
+
+input:valid{
+	border: solid 1px #008733 !important;
+	background-color:#eafff2 !important;
+}
+
+input[type="date"]:invalid{
+	background-color: #ffffff !important;
+	border: #d1d1d1 1px solid !important;
+}
+
+th, td{
+	text-align: center !important;
+}
+
+
+
+
+

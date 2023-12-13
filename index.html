@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head> 
+		<!--codificacion de caracteres-->
+		<meta charset="UTF-8" />
+		<!--titulo de mi pagina-->
+		<title>Parkfy</title>
+		<!--cargo hoja de estilos bootstrap.Conviene cargar esto antes que lo nuestro. 
+			Los ficheros JS van en el footer-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!--metadatos sobre la pagina-->
+		<meta name="description" content="ejercicios curso de desarrollo de aplicaciones con tecnologias web" />
+		<meta name="author" content ="Oscar" />
+		<meta name="keywords" content="html css javascript" />
+		<!--adapta el contenido al ancho del navegador-->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--Definicion del favicon o icono de la pagina...-->
+		<link rel="shortcut icon" href="img/fav_icon.png" /> 
+		<!--enlazo mi hoja de estilos .css-->
+		<link rel="stylesheet" href="css/custom.css"/>
+		
+		
+	</head>
+	
+	<body>
+		
+		
+		<header>	
+		</header>
+		<!--esto es la barra donde se busca...-->
+		 <nav class="navbar navbar-expand-md navbar-light bg-light py-3">
+		      <a class="navbar-brand" href="#">
+		      	<img src="img/logo.png" height="30px"/>
+		      </a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		      </button>
+		
+		      <div class="collapse navbar-collapse" id="navbarsExample04">
+		        <ul class="navbar-nav ml-auto">
+		          <li class="nav-item active">
+		            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">Parkings</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">Regístrate</a>
+		          </li>
+		          <li class="nav-item">
+		            <a class="nav-link" href="#">Inicia sesión</a>
+		          </li>
+		        </ul>
+
+		      </div>
+		    </nav>
+		<!--barra lateral (menu secundario, baners...)-->
+		<aside>
+		</aside>
+		<!--esta parte es el contenido, una seccion puede incluir varios articulos-->
+		<section>
+
+			<div id="carouselExampleSlidesOnly" class="carousel slide d-none d-md-block " data-ride="carousel">
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="img/001.jpg" alt="First slide"/>   	       
+			       <div class="container ">
+			          <div class="carousel-caption alinear-mitad"> <!-- ALINEAR -->
+			            <h1 class="txt-sombra">Ahorra en parking por días aparcando en la plaza de otra persona</h1>
+						<div class="input-group mt-5 mx-auto input-ancho">
+						  	<input type="text" class="form-control fondo-blanco" placeholder="Parking en Madrid" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						 	 <div class="input-group-append">
+						    <button class="btn btn-danger" type="button">Buscar</button>
+							</div>
+						</div>
+			          </div>
+			       </div> 
+			    </div>
+			  </div>
+			</div>
+
+
+		</section>
+		<section>
+		<div class="container">
+		<h3 class="text-center my-3">Reserva tu aparcamiento</h3>
+		<form class="mt-4">
+			<div class="row">
+				<div class="col-md-4">
+					<label for="nombre">Nombre</label>
+					<input type="text" class="form-control" 
+					name="nombre" id="nombre"
+					required
+					minlength="3"
+					maxlength="100"
+					placeholder="Escribe tu nombre"
+					oninput="setCustomValidity('')"
+					oninvalid="setCustomValidity('Debes escribir un nombre válido')"
+					pattern="([A-z-ñÑáÁéÉíÍóÓúÚü]+[\s]{1}[A-z-ñÑáÁéÉíÍóÓúÚü]+)|[A-z-ñÑáÁéÉíÍóÓúÚü]+"
+					/>										
+				</div>	
+				<div class="col-md-4">
+					<label for="apellido1">Primer Apellido</label>
+					<input type="text" class="form-control" 
+					name="apellido1" id="apellido1"
+					required
+					minlength="3"
+					maxlength="100"
+					placeholder="Escribe tu primer apellido"
+					oninput="setCustomValidity('')"
+					oninvalid="setCustomValidity('Debes escribir un nombre válido')"
+					pattern="([A-z-ñÑáÁéÉíÍóÓúÚü]+[\s]{1}[A-z-ñÑáÁéÉíÍóÓúÚü]+)|[A-z-ñÑáÁéÉíÍóÓúÚü]+"
+					/>										
+				</div>
+				<div class="col-md-4">
+					<label for="apellido2">Segundo Apellido</label>
+					<input type="text" class="form-control" 
+					name="apellido2" id="apellido2"
+					required
+					minlength="3"
+					maxlength="100"
+					placeholder="Escribe tu segundo apellido"
+					oninput="setCustomValidity('')"
+					oninvalid="setCustomValidity('Debes escribir un nombre válido')"
+					pattern="([A-z-ñÑáÁéÉíÍóÓúÚü]+[\s]{1}[A-z-ñÑáÁéÉíÍóÓúÚü]+)|[A-z-ñÑáÁéÉíÍóÓúÚü]+"
+					/>										
+				</div>							
+			
+			</div>
+		
+
+			<div class="row">
+				<div class="col-md-4">
+					<label for="text">Aparcamiento</label>
+					 <select name="parking" id="parking" class="form-control">
+				                         <option>Chamartin</option>
+				                         <option>Callao</option>
+				                         <option>Atocha</option>
+				     </select>						
+				</div>	
+				
+					<div class="col-md-4">
+						<label for="text">Matricula</label>
+						<input type="text" class="form-control" 					
+						name="matricula" id="matricula"
+						required
+						minlength="6"
+						maxlength="10"
+						oninput="setCustomValidity('')"
+						placeholder="Introduce la matricula de tu coche"
+						pattern="([A-Z]{1,2}\s{0,1}[0-9]{4}\s{0,1}[A-Z]{1,2})|([0-9]{4}\s{0,1}[A-Z]{3})"
+						oninvalid="setCustomValidity('Debes escribir una matricula valida')"
+						/>
+					</div>
+
+					<div class="col-md-4">
+						<label for="text">Marca y modelo de coche</label>
+						<input type="text" name="marca-modelo" id="marca-modelo" list="marca_modelo" 
+						required placeholder="marca y modelo" class="form-control" />
+						<datalist id="marca_modelo">
+							<option>Renault Clio</option>
+							<option>Renault Megane</option>
+							<option>Renault Scenic</option>
+							<option>Renault Twizy</option>
+							<option>Renault Twingo</option>
+						</datalist>
+					</div>
+			</div>
+				<div class="row">
+				<div class="col-md-4">
+					<label for="fEntrada">Fecha de entrada</label>
+					<input type="date" class="form-control" 
+					name="fEntrada" id="fEntrada"
+					required
+					min=""
+					onchange="calculaFechaSalida()"
+					oninput="setCustomValidity('')"
+					oninvalid="setCustomValidity('Debes escribir una edad válida')"
+					/>										
+				</div>	
+				<div class="col-md-2">
+					<label for="destino">Hora de entrada</label>
+					
+						<select name="horaEntrada" id="horaEntrada" class="form-control">
+						<option>00:00</option>
+						<option>01:00</option>
+						<option>02:00</option>
+						<option>03:00</option>
+						<option>04:00</option>
+						<option>05:00</option>
+						<option>06:00</option>
+						<option>07:00</option>
+						<option>08:00</option>
+						<option>09:00</option>
+						<option>10:00</option>
+						<option>11:00</option>
+						<option>12:00</option>
+						<option>13:00</option>
+						<option>14:00</option>
+						<option>15:00</option>
+						<option>16:00</option>
+						<option>17:00</option>
+						<option>18:00</option>
+						<option>19:00</option>
+						<option>20:00</option>
+						<option>21:00</option>
+						<option>22:00</option>
+						<option>23:00</option>
+						</select>
+				</div>
+				<div class="col-md-4">
+					<label for="fSalida">Fecha de salida</label>
+					<input type="date" class="form-control" 
+					name="fSalida" id="fSalida"
+					required
+					min=""
+					oninput="setCustomValidity('')"
+					oninvalid="setCustomValidity('Debes escribir una fecha posterior a la de hoy')"
+					/>										
+				</div>	
+					<div class="col-md-2">
+					<label for="destino">Hora de salida</label>
+					
+						<select name="horaSalida" id="horaSalida" class="form-control">
+						<option>00:00</option>
+						<option>01:00</option>
+						<option>02:00</option>
+						<option>03:00</option>
+						<option>04:00</option>
+						<option>05:00</option>
+						<option>06:00</option>
+						<option>07:00</option>
+						<option>08:00</option>
+						<option>09:00</option>
+						<option>10:00</option>
+						<option>11:00</option>
+						<option>12:00</option>
+						<option>13:00</option>
+						<option>14:00</option>
+						<option>15:00</option>
+						<option>16:00</option>
+						<option>17:00</option>
+						<option>18:00</option>
+						<option>19:00</option>
+						<option>20:00</option>
+						<option>21:00</option>
+						<option>22:00</option>
+						<option>23:00</option>
+						</select>
+				</div>
+				</div>
+
+			<div class="row">
+				<div class="col-md-4 mt-3">
+				<input type="checkbox" id="aceptoCondic" 
+				name="aceptoCondic" onchange="habilitaBoton()" />
+				<label for="aceptoCondic">Acepto los términos y condiciones</label>
+				</div>
+				
+			</div>
+	
+			</form>
+			<button class="btn btn-primary mt-3" type="submit"
+			id="botonEnviar" disabled onclick="calcular()">Enviar</button>
+			
+			<div class="row mt-3">
+			<div class="col">
+			<table id= "tablaParking" class="table table-bordered text-center">
+			<tr>
+				<th colspan="4" id="tNombreApellido" class="bg-dark text-light border-dark">Nombre y apellidos</th>
+			</tr>
+			<tr>
+				<th colspan="4" id="tCoche" class="bg-danger">Matricula, marca y modelo de coche</th>
+			</tr>
+			<tr>
+				<th colspan="4" id="tParking" class="bg-light">Parking</th>
+			</tr>
+			<tr>
+				<th class="table-primary w-50" colspan="2">Entrada</th>
+				<th class="table-success" colspan="2">Salida</th>
+			</tr>	
+			<tr>
+				<td>Fecha</td>
+				<td >Hora</td>			
+				<td >Fecha</td>
+				<td >Hora</td>
+				
+			</tr>	
+			<tr>
+				<td id="tFechaEntrada"></td>
+				<td id="tHoraEntrada"></td>			
+				<td id="tFechaSalida"></td>
+				<td id="tHoraSalida"></td>
+				
+			</tr>
+	
+			<tr>
+				<th id="tDuracion" class="table-secondary" colspan="2">Duración total (h)</th>
+				<th id="tPrecio" class="table-warning" colspan="2">Precio hora</th>
+			</tr>
+				<tr>
+				<td id="tDuracion" colspan="2"> 
+					
+				</td>
+				<td id="tPrecioHora" colspan="2"> 
+				
+				</td>
+			</tr>
+			<tr>
+				<th colspan="4" id="tImporte" class="table-danger">Importe total</th>
+			</tr>
+				<tr>
+				<td id="tImporte" colspan="4"> 
+					
+				</td>
+				
+			</tr>
+		</table>
+			</div>
+		</div>
+	</div>
+			
+		</section>
+		
+		<footer>
+			
+			</div>		
+		</footer>
+		</div>
+		<!--mi script-->
+		<script src="js/main.js"></script>
+	<!--ficheros javascript de bootstrap 4-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+	
+		
+</html>
